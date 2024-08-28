@@ -1,0 +1,49 @@
+From 9e238bfa5a6cd13dbd845ab5feaf8267fd6f0d62 Mon Sep 17 00:00:00 2001
+From: wjyrich <1071633242@qq.com>
+Date: Thu, 15 Aug 2024 14:12:19 +0800
+Subject: [PATCH] install
+
+---
+ wubigendaqi.desktop | 11 +++++++++++
+ wubigendaqi.pro     |  8 ++++++++
+ 2 files changed, 19 insertions(+)
+ create mode 100644 wubigendaqi.desktop
+
+diff --git a/wubigendaqi.desktop b/wubigendaqi.desktop
+new file mode 100644
+index 0000000..3d8ebd7
+--- /dev/null
++++ b/wubigendaqi.desktop
+@@ -0,0 +1,11 @@
++[Desktop Entry]
++Categories=Accessibility;Qt;Utility;
++Exec=wubigendaqi
++Name=wubigendaqi
++Name[zh_CN]=wubigendaqi
++Icon=file
++StartupNotify=false
++Terminal=false
++Type=Application
++GenericName=wubigendaqi
++Version=0.2
+\ No newline at end of file
+diff --git a/wubigendaqi.pro b/wubigendaqi.pro
+index f184134..3fc9162 100644
+--- a/wubigendaqi.pro
++++ b/wubigendaqi.pro
+@@ -50,3 +50,11 @@ DISTFILES += \
+ RESOURCES += \
+     source.qrc
+ UI_DIR=./UI
++
++target.path = $$PREFIX/bin
++desktop.files = wubigendaqi.desktop
++desktop.path = $$PREFIX/share/applications/
++icons.path = $$PREFIX/share/icons
++icons.files = img/file.png
++
++INSTALLS += target desktop icons
+\ No newline at end of file
+-- 
+2.43.4
+
